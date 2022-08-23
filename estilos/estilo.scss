@@ -1,0 +1,170 @@
+$celeste: #33FFB2;
+$verde: #11A327;
+$amarillo: #EDFF67;
+$bordo: #54092A;
+
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+body {
+	background: $verde;
+	font-family: 'Bitter', serif;
+	font-weight: regular;
+	min-height: 100%;
+	background-image: linear-gradient(to bottom, $verde , $celeste);
+}
+.cabecera {
+	width: 100%;
+	text-align: center;
+	margin: 0px auto;
+	display: grid;
+	grid-template-columns: auto 70% auto;
+	.logo1 {
+		align-content: center;
+		width: 100%;
+	}
+	.logo2 {
+		width: 100%;
+	}
+}
+header {
+	background: $celeste;
+	color: #B90159;
+	font-family: 'Edu VIC WA NT Beginner', cursive;
+	text-align: center;
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	text-align: center;
+}
+.menu {
+	a {
+		color: $bordo;
+		font-family: 'Edu VIC WA NT Beginner', cursive;
+		text-decoration: none;
+		text-align: center;
+		margin: 30px;
+	}
+	text-decoration: none;
+	text-align: center;
+	background: $celeste;
+	margin-top: 20px;
+}
+.activo {
+	font-weight: bold;
+}
+.pagina {
+	display: grid;
+	grid-template-rows: auto;
+}
+.contenido {
+	width: 70%;
+	max-width: 1400px;
+	margin: 0 auto;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	background-color: hotpink;
+	border: 2px solid red;
+	margin-top: 100px;
+	padding: 50px 40px;
+	h2 {
+		text-align: center;
+		margin: 1em 0;
+	}
+	p {
+		background-color: $amarillo;
+		padding: 1em 2em;
+		transition-property: background color;
+		transition-duration: 1s;
+		transition-timing-function: ease-in;
+		transition-delay: 0s;
+		&:hover {
+			background-color: red;
+		}
+	}
+	.titul {
+		font-weight: bold;
+	}
+}
+nav {
+	padding: 0em 2.5em;
+	padding-bottom: 1em;
+}
+.submenu {
+	background-color: $amarillo;
+	list-style: none;
+	ul {
+		li {
+			list-style: none;
+			padding-bottom: 10px;
+			font-family: 'Edu VIC WA NT Beginner', cursive;
+		}
+	}
+	ol {
+		li {
+			padding-bottom: 1px;
+			font-family: 'Edu VIC WA NT Beginner', cursive;
+		}
+	}
+}
+p {
+	color: $bordo;
+	font-family: 'Edu VIC WA NT Beginner', cursive;
+}
+footer {
+	border: 2px solid black;
+	background-color: white;
+	margin-top: 2em;
+	padding: 1.5em;
+	p {
+		color: $bordo;
+		height: 50px;
+	}
+}
+.formulario {
+	background: white;
+	width: 70%;
+	margin: 0px auto;
+	h3 {
+		text-align: center;
+	}
+	ul {
+		text-align: center;
+		padding-top: 20px;
+		padding-right: 15px;
+		border: 1px solid black;
+		color: $bordo;
+		background: grey;
+		width: 70%;
+		margin: 0px auto;
+	}
+	form {
+		text-align: center;
+	}
+	p {
+		text-align: center;
+	}
+}
+@media (max-width: 1000px) {
+	.logo2 {
+		display: none;
+	}
+	.cabecera {
+		grid-template-columns: auto 70%;
+	}
+}
+@media (max-width: 480px) {
+	.logo1 {
+		display: none;
+	}
+	.cabecera {
+		grid-template-columns: 100%;
+	}
+	.contenido {
+		width: 100%;
+	}
+}
