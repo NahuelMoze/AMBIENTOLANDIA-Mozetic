@@ -15,9 +15,12 @@ body {
 	min-height: 100%;
 	background-image: linear-gradient(to bottom, $verde , $celeste);
 }
+@mixin txtaline($centrar) {
+	text-align: $centrar
+}
 .cabecera {
 	width: 100%;
-	text-align: center;
+	@include txtaline(center);
 	margin: 0px auto;
 	display: grid;
 	grid-template-columns: auto 70% auto;
@@ -33,23 +36,23 @@ header {
 	background: $celeste;
 	color: #B90159;
 	font-family: 'Edu VIC WA NT Beginner', cursive;
-	text-align: center;
+	@include txtaline(center);
 	width: 100%;
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
-	text-align: center;
+	@include txtaline(center);
 }
 .menu {
 	a {
 		color: $bordo;
 		font-family: 'Edu VIC WA NT Beginner', cursive;
 		text-decoration: none;
-		text-align: center;
+		@include txtaline(center);
 		margin: 30px;
 	}
 	text-decoration: none;
-	text-align: center;
+	@include txtaline(center);
 	background: $celeste;
 	margin-top: 20px;
 }
@@ -72,7 +75,7 @@ header {
 	margin-top: 100px;
 	padding: 50px 40px;
 	h2 {
-		text-align: center;
+		@include txtaline(center);
 		margin: 1em 0;
 	}
 	p {
@@ -130,10 +133,10 @@ footer {
 	width: 70%;
 	margin: 0px auto;
 	h3 {
-		text-align: center;
+		@include txtaline(center);
 	}
 	ul {
-		text-align: center;
+		@include txtaline(center);
 		padding-top: 20px;
 		padding-right: 15px;
 		border: 1px solid black;
@@ -143,10 +146,10 @@ footer {
 		margin: 0px auto;
 	}
 	form {
-		text-align: center;
+		@include txtaline(center);
 	}
 	p {
-		text-align: center;
+		@include txtaline(center);
 	}
 }
 @media (max-width: 1000px) {
